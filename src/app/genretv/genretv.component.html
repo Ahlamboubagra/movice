@@ -1,0 +1,22 @@
+<div class="listing">
+    <div class="listing__head">
+        <h2 class="listing__title">TV Genre </h2>
+    </div>
+    <div class="row">
+        <div class="col-md-2 listing__items" *ngFor="let tv of tv; let i = index;">
+
+            <div class="movie-item-style">
+                <div class="overlay">
+                    <div class="hover-inner"><i class="material-icons">play_arrow</i> PLAY NOW</div>
+                </div>
+                <a [routerLink]="['/tv', tv.id]">
+                    <img class="card-img-top" [src]="'https://image.tmdb.org/t/p/w300'+tv.poster_path" [alt]="tv.original_title">
+
+
+                </a>
+                <h6>{{ tv?.title }}</h6>
+
+            </div>
+        </div>
+    </div>
+</div>

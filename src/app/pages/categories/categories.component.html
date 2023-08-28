@@ -1,0 +1,6 @@
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-xl-2 col-sm-6" *ngFor="let movie of ClickMovie">
+        <app-card [item]="movie"></app-card>
+        <app-slidetv [items]="[movie]"></app-slidetv>
+    </div>
+</div>

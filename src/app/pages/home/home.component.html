@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-12">
+        <app-slider [items]="upComingMovies"></app-slider>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="my-5 text-center">Popular Movies</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-lg-3 col-xl-2 col-sm-6 " *ngFor="let popular of popularMovies">
+        <app-card [item]="popular"></app-card>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="my-5 text-center">Popular tv</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-lg-3 col-xl-2 col-sm-6" *ngFor="let popular of populartv">
+        <div class="card my-2 animate__animated animate__flip">
+            <a [routerLink]="['/tv', popular.id]">
+
+                <img *ngIf="popular.poster_path " class="card-img-top" [src]="'https://image.tmdb.org/t/p/w300'+popular.poster_path" [alt]="popular.original_title">
+                <img *ngIf="!popular.poster_path " src="https://m.media-amazon.com/images/M/MV5BMjc0YWM3MjQtNzNhYy00ZWM5LTk2ODMtNTE0ZmVmYzgzMWMwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_QL75_UY562_CR7,0,380,562_.jpg" alt="title" class="card-img-top">
+            </a>
+            <div class="card-body">
+                <h6 class="card-title">{{popular.original_name}}</h6>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+<br>
+<br>

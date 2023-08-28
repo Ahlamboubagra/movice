@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-3 col-lg-2" *ngFor="let acter of actors">
+        <div class="card">
+            <img *ngIf="acter.profile_path" [src]="'https://image.tmdb.org/t/p/w300'+acter.profile_path" alt="title" class="card-img-top">
+            <img *ngIf="!acter.profile_path " src="https://www.drnitinborse.com/wp-content/uploads/2018/02/user-icon.png" alt="title" class="card-img-top">
+            <div class="card-body">
+                <h4 class="card-title">{{acter.name}}
+                    <span class="badge bg-success">
+          {{acter.popularity | number:'1.0-0'}}
+        </span>
+                </h4>
+
+            </div>
+        </div>
+    </div>
+</div>

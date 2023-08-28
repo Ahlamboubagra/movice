@@ -1,0 +1,14 @@
+<div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item" [ngClass]="{'active': f}" data-bs-interval="5000" *ngFor="let ite of items; first as f">
+            <img [src]="'https://image.tmdb.org/t/p/original'+ite.poster_path" class="d-block w-100 vh-100 " [alt]="ite.original_name">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>{{ ite.original_name }}</h5>
+                <p>{{ ite.overview }}</p>
+            </div>
+        </div>
+
+    </div>
+</div>

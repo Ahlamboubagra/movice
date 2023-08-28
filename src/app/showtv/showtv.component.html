@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-3 text-center my-3">{{ tv.vote_count }} Votes</div>
+    <div class="col-md-3 text-center my-3">{{ tv.vote_average }} / 10 Average</div>
+    <div class="col-md-3 text-center my-3">{{ tv.status }}</div>
+    <div class="col-md-3 text-center my-3">{{ tv.release_date }}</div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <app-slidetv [items]="[tv]"></app-slidetv>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="siml">Similar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="actors">Actors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="img">Images</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="vide">video</a>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+<hr>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+    <div class="col" *ngFor="let imge of imges">
+        <div class="card">
+
+            <a [routerLink]="['/tv', imge.id]">
+                <img class="card-img-top" [src]="'https://image.tmdb.org/t/p/w300'+imge.file_path" [alt]="imge.original_title">
+            </a>
+
+
+
+        </div>
+    </div>
+</div>

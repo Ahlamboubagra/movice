@@ -1,0 +1,16 @@
+<p-sidebar [(visible)]="sidebarVisible1" position="left">
+    <div class="container" style="margin-top: 87px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="list-group">
+                    <ul class="list-group">
+                        <li class="nav-item me-2" *ngFor="let categorie of CategorieMovies" (click)="getypemovie(categorie.id)">
+                            <a routerLink="/categories" routerLinkActive="active" class="list-group-item list-group-item-action active">{{categorie.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</p-sidebar>
+<p-button type="button" class="mr-2" (click)="sidebarVisible1 = true" icon="pi pi-arrow-down"></p-button>
